@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TV Energy Consumption</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <h2 class="dashboard-title">TV Energy Consumption Dashboard</h2>
+
+        <div class="row-full chart-card">
+            <div id="line-chart"></div>
+        </div>
+
+        <div class="row-half">
+            <div id="bar-chart" class="chart-card"></div>
+            <div id="donut-chart" class="chart-card"></div>
+        </div>
+
+        <div class="row-full chart-card">
+            <div id="scatter-plot"></div>
+        </div>
+    </div>
+
+    <script src="js/ScatterPlot.js"></script>
+    <script src="js/BarChart.js"></script>
+    <script src="js/LineChart.js"></script>
+    <script src="js/PieChart.js"></script>
+    <script>
+        drawScatterPlot('#scatter-plot', 'data/RatingAndConsumption.csv');
+        drawBarChart('#bar-chart', 'data/ScreenTechnologyAndConsumption.csv');
+        drawLineChart('#line-chart', 'data/SizeAndConsumption.csv');
+        drawPieChart('#donut-chart', 'data/SizeCategoryAndConsumption.csv');
+    </script>
+
+</body>
+</html>
