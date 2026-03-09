@@ -9,20 +9,67 @@
 <body>
 
     <div class="dashboard">
-        <h2 class="dashboard-title">TV Energy Consumption Dashboard</h2>
 
-        <div class="row-full chart-card">
-            <div id="line-chart"></div>
-        </div>
+        <!-- ── Hero / Introduction ── -->
+        <header class="hero-card">
+            <div class="hero-text">
+                <h1 class="hero-title">TV Energy Consumption</h1>
+                <p class="hero-subtitle">An interactive visual exploration of how television screen size, screen technology, and energy ratings relate to real-world power consumption.</p>
+                <ul class="hero-stats">
+                    <li><span class="stat-value">4</span><span class="stat-label">Visualisations</span></li>
+                    <li><span class="stat-value">3</span><span class="stat-label">Data Dimensions</span></li>
+                    <li><span class="stat-value">100+</span><span class="stat-label">TV Models</span></li>
+                </ul>
+            </div>
+            <div class="hero-desc">
+                <p>Use the charts below to uncover patterns in TV power usage. Hover over data points, bars, and slices for detailed breakdowns. Scroll down to move between chart sections.</p>
+                <div class="hero-tags">
+                    <span class="tag">Screen Technology</span>
+                    <span class="tag">Display Size</span>
+                    <span class="tag">Energy Rating</span>
+                    <span class="tag">Power (kWh)</span>
+                </div>
+            </div>
+        </header>
 
-        <div class="row-half">
-            <div id="bar-chart" class="chart-card"></div>
-            <div id="donut-chart" class="chart-card"></div>
-        </div>
+        <!-- ── Row 1: Trend over size (full width) ── -->
+        <section class="section-block">
+            <div class="section-intro">
+                <h2 class="section-title">Energy vs. Screen Size</h2>
+                <p class="section-desc">Tracks how annual energy consumption (kWh) scales with screen diagonal size. Larger screens generally draw more power — but does the trend hold across all sizes?</p>
+            </div>
+            <div class="row-full chart-card">
+                <div id="line-chart"></div>
+            </div>
+        </section>
 
-        <div class="row-full chart-card">
-            <div id="scatter-plot"></div>
-        </div>
+        <!-- ── Row 2: Technology breakdown + Category share ── -->
+        <section class="section-block">
+            <div class="section-intro">
+                <h2 class="section-title">Technology &amp; Category Breakdown</h2>
+                <p class="section-desc">Compare average consumption across screen technologies (LED, OLED, QLED) and see how different size categories share overall market energy use.</p>
+            </div>
+            <div class="row-half">
+                <div id="bar-chart" class="chart-card"></div>
+                <div id="donut-chart" class="chart-card"></div>
+            </div>
+        </section>
+
+        <!-- ── Row 3: Rating vs consumption (full width) ── -->
+        <section class="section-block">
+            <div class="section-intro">
+                <h2 class="section-title">Energy Rating vs. Consumption</h2>
+                <p class="section-desc">Each point represents a single TV model. Do higher-rated (more efficient) TVs consistently consume less energy, or are there surprising outliers?</p>
+            </div>
+            <div class="row-full chart-card">
+                <div id="scatter-plot"></div>
+            </div>
+        </section>
+
+        <footer class="dash-footer">
+            <p>Data sourced from TV energy efficiency test records &mdash; Exercise 5 &mdash; Swinburne University</p>
+        </footer>
+
     </div>
 
     <script src="js/ScatterPlot.js"></script>
